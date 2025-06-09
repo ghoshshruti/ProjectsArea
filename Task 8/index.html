@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bootstrap Blog</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom styles */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1200x600/?blog');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+        
+        .blog-card {
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to My Blog</h1>
+            <p class="lead">Discover amazing content about technology, travel, and more</p>
+            <a href="#featured-posts" class="btn btn-primary btn-lg mt-3">Explore Posts</a>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="container" id="featured-posts">
+        <h2 class="text-center mb-5">Featured Posts</h2>
+        <div class="row g-4">
+            <!-- Blog Post 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card">
+                    <img src="https://source.unsplash.com/random/600x400/?technology" class="card-img-top" alt="Technology">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-primary">Technology</span>
+                            <small class="text-muted">October 15, 2023</small>
+                        </div>
+                        <h5 class="card-title">The Future of Web Development</h5>
+                        <p class="card-text">Explore the latest trends and technologies shaping the future of web development in 2023 and beyond.</p>
+                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card">
+                    <img src="https://source.unsplash.com/random/600x400/?travel" class="card-img-top" alt="Travel">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-success">Travel</span>
+                            <small class="text-muted">October 10, 2023</small>
+                        </div>
+                        <h5 class="card-title">Top 10 Hidden Gems in Europe</h5>
+                        <p class="card-text">Discover these amazing off-the-beaten-path destinations that most tourists don't know about.</p>
+                        <a href="#" class="btn btn-outline-success">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card">
+                    <img src="https://source.unsplash.com/random/600x400/?food" class="card-img-top" alt="Food">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-danger">Food</span>
+                            <small class="text-muted">October 5, 2023</small>
+                        </div>
+                        <h5 class="card-title">Healthy Recipes for Busy People</h5>
+                        <p class="card-text">Quick and nutritious meals you can prepare in under 30 minutes for your busy lifestyle.</p>
+                        <a href="#" class="btn btn-outline-danger">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card">
+                    <img src="https://source.unsplash.com/random/600x400/?fitness" class="card-img-top" alt="Fitness">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-warning text-dark">Fitness</span>
+                            <small class="text-muted">September 28, 2023</small>
+                        </div>
+                        <h5 class="card-title">Home Workout Routine for Beginners</h5>
+                        <p class="card-text">No gym? No problem! This complete home workout requires minimal equipment.</p>
+                        <a href="#" class="btn btn-outline-warning">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card">
+                    <img src="https://source.unsplash.com/random/600x400/?business" class="card-img-top" alt="Business">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-info">Business</span>
+                            <small class="text-muted">September 20, 2023</small>
+                        </div>
+                        <h5 class="card-title">Remote Work Productivity Tips</h5>
+                        <p class="card-text">Maximize your productivity while working from home with these proven strategies.</p>
+                        <a href="#" class="btn btn-outline-info">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card blog-card">
+                    <img src="https://source.unsplash.com/random/600x400/?photography" class="card-img-top" alt="Photography">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-secondary">Photography</span>
+                            <small class="text-muted">September 15, 2023</small>
+                        </div>
+                        <h5 class="card-title">Smartphone Photography Hacks</h5>
+                        <p class="card-text">Take professional-quality photos with just your smartphone using these techniques.</p>
+                        <a href="#" class="btn btn-outline-secondary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>About Us</h5>
+                    <p class="text-muted">A blog dedicated to sharing knowledge and experiences about technology, travel, lifestyle, and more.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-white">Home</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Categories</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <p class="mb-0">&copy; 2023 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

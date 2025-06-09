@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch data</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section class="api-section" id="api-demo">
+    <div class="container">
+        <h2 class="section-title">API Data Demo</h2>
+        <p class="section-subtitle">Fetching user data from JSONPlaceholder API</p>
+        
+        <div class="controls">
+            <button id="fetchUsersBtn" class="fetch-btn">Fetch Users</button>
+            <button id="reloadUsersBtn" class="fetch-btn reload-btn">Reload Data</button>
+        </div>
+        
+        <div id="loadingIndicator" class="loading">
+            <div class="spinner"></div>
+            <p>Loading users...</p>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        
+        <div id="usersContainer" class="users-grid"></div>
+    </div>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>

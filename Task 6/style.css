@@ -1,0 +1,89 @@
+/* Contact Form Styles */
+.contact-form {
+    background-color: #1a1625;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #2a2438;
+    border: 1px solid #3d3a4a;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e16c81c8;
+    box-shadow: 0 0 0 2px rgba(225, 108, 129, 0.2);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.success-message {
+    color: #4caf50;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+/* Form Validation States */
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #ff6b6b;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+    border-color: #4caf50;
+}
+
+/* Submit Button */
+#submitBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: #e16c81c8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #d24084;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(210, 64, 132, 0.3);
+}
+
+#submitBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
